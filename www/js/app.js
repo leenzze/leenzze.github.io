@@ -27,7 +27,7 @@ var leenzzeApp = angular.module('leenzzeApp', ['ionic','ngRoute'])
     $routeProvider
     .when('/', {
         controller: 'mainCtrl',
-        templateUrl: 'view/main.html'
+        templateUrl: 'www/view/main.html'
     })
     .otherwise({
         redirectTo:'/'
