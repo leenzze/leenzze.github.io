@@ -1,3 +1,5 @@
+//홈페이지용 app.js
+ 
 // Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
@@ -27,7 +29,7 @@ var leenzzeApp = angular.module('leenzzeApp', ['ionic','ngRoute'])
     $routeProvider
     .when('/', {
         controller: 'mainCtrl',
-        templateUrl: 'view/main.html'
+        templateUrl: 'www/view/main.html'
     })
     .otherwise({
         redirectTo:'/'
