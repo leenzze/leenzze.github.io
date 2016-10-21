@@ -25,11 +25,27 @@ var leenzzeApp = angular.module('leenzzeApp', ['ionic','ngRoute'])
 
 .config(['$routeProvider',function($routeProvider){
     $routeProvider
-    .when('/', {
-        controller: 'mainCtrl',
-        templateUrl: 'view/main.html'
+    .when('/Home', {
+        controller: 'homeCtrl',
+        templateUrl: 'view/home.html'
+    })
+    .when('/Profile',{
+      controller : 'profileCtrl',
+      templateUrl: 'view/profile.html'
+    })
+    .when('/Skills',{
+      controller : 'skillsCtrl',
+      templateUrl: 'view/skills.html'
+    })
+    .when('/Portfolio',{
+      controller : 'portfolioCtrl',
+      templateUrl: 'view/portfolio.html'
+    })
+    .when('/Experience',{
+      controller : 'experienceCtrl',
+      templateUrl: 'view/experience.html'
     })
     .otherwise({
-        redirectTo:'/'
+        redirectTo:'/Home'
     });
 }]);

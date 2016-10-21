@@ -37,10 +37,26 @@
     <script src="www/lib/angular-route.js"></script>
 
     <!--controller-->
-    <script src="www/js/main.js"></script>
+    <script src="www/js/index.js"></script>
+    <script src="www/js/home.js"></script>
+    <script src="www/js/profile.js"></script>
+    <script src="www/js/skills.js"></script>
+    <script src="www/js/portfolio.js"></script>
+    <script src="www/js/experience.js"></script>
 
   </head>
   <body ng-app="leenzzeApp">
-    <div ng-view></div>
+   <div class="common-headerbar" ng-controller="indexCtrl">
+      <div ng-click="goPage(Home)" style="width: 30%; float:left; margin-right: 20%; text-align:left;">
+        <img style="width:15%; float:left; border-radius:20px; margin-right: 10px;" src="img/headerimg.jpg">
+        <div style="font-size: 1.6em;">LEE EUN JI</div>
+        <div style="font-size: 0.7em;">FRONT END DEVELOPER</div>
+      </div>
+      <div style="width: 10%; float:left;" ng-repeat="mn in menu" ng-click="goPage(mn.name)">
+        <i class="{{mn.icon}}"></i>
+        <div>{{mn.name}}</div>
+      </div>
+    </div>
+    <div ng-view class="wrap"></div>
   </body>
 </html>
