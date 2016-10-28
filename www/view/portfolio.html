@@ -1,3 +1,19 @@
-<div>
-    portfolio page 
+<div class="fixed-header" id="myNavbar">
+  <div ng-click="scrollTop('section1')">section1</div>
+  <div ng-click="scrollTop('section2')">section2</div>
+  <div ng-click="scrollTop('section3')">section3</div>
 </div>
+<ion-scroll delegate-handle="mainScroll">
+  <div id="section1" ng-click="scrollTop('section3')" class="container-fluid aa">
+    <h1>Section 1</h1>
+    <p>Click on the different Section links in the navbar to see the smooth scrolling effect.</p>
+  </div>
+  <div id="section2" class="container-fluid aa">
+    <h1>Section 2</h1>
+    <p>Click on the different Section links in the navbar to see the smooth scrolling effect.</p>
+  </div>
+  <div id="section3" ng-click="scrollTop('section3')" class="container-fluid aa">
+    <h1>Section 3</h1>
+    <p>Click on the different Section links in the navbar to see the smooth scrolling effect.</p>
+  </div>
+</ion-scroll>

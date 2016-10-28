@@ -1,7 +1,20 @@
 
     <div class="home-title">
-        {{aaa}}
+        <ion-slides options="options" slider="data.slider">
+          <ion-slide-page>
+            <div class="box blue">
+              <h1>BLUE</h1></div>
+          </ion-slide-page>
+          <ion-slide-page>
+            <div class="box yellow">
+              <h1>YELLOW</h1></div>
+          </ion-slide-page>
+          <ion-slide-page>
+            <div class="box pink">
+              <h1>PINK</h1></div>
+          </ion-slide-page>
+        </ion-slides>
     </div>
-    <div style="width:100%;  height: 100%; padding: 5%;">
+    <div class="home-category">
       <div class="home-list" ng-repeat="list in pageList" ng-click="goPage(list)">{{list}}</div>
     </div>

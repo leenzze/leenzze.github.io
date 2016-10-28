@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var leenzzeApp = angular.module('leenzzeApp', ['ionic','ngRoute'])
+var leenzzeApp = angular.module('leenzzeApp', ['ionic','ngRoute','duScroll','ionicScroller',  'ui.bootstrap'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -49,3 +49,22 @@ var leenzzeApp = angular.module('leenzzeApp', ['ionic','ngRoute'])
         redirectTo:'/Home'
     });
 }]);
+
+leenzzeApp.directive('scrolltop', 
+    [
+        '$ionicScrollDelegate',
+        function(
+            $ionicScrollDelegate
+            ) {
+                return {
+                    link: function (scope, element, attrs) {
+                        element.on('click', function (event) {
+                            //  - (element.height() +13)  + 70
+                            // Also testes scrollBy
+                            $ionicScrollDelegate.scrollTo(0, element.offset().top, true);
+                        });
+                    }
+                };
+            }
+    ]
+);
